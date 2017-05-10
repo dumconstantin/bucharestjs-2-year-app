@@ -1,0 +1,90 @@
+
+.page-sendMessage {
+
+  .userAvatar {
+    position: relative;
+    top: 2vh;
+    width: 35vw;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: 'Caveat';
+    font-size: 3em;
+  }
+  .navbar {
+    &:after {
+      display: none;
+    }
+
+    font-family: 'Caveat';
+    font-size: 2em;
+    height: 15vh;
+
+  }
+
+  .page-content {
+    padding-top: 20vh;
+  }
+
+  .messageSent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    font-size: 3em;
+    font-family: 'Caveat';
+
+    p {
+      padding: 0 10vw;
+      text-align: center;
+    }
+    .preloader {
+      margin-top: 10vh;
+      width: 20vw;
+      height: 20vw;
+    }
+  }
+
+  .messages {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    li {
+      list-style: none;
+      margin-bottom: 5vh;
+      width: 43vw;
+      height: 43vw;
+      padding: 0 0 5vh 0;
+    }
+
+    
+
+    p {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+
+
+}

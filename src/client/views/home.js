@@ -7,8 +7,6 @@ module.exports = {
   h1 Happy Birthday BucharestJS!
   .logo-bg(src="images/logo.jpg")
 
-  mobile
-
   users
 
   join-us

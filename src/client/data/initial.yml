@@ -1,12 +1,14 @@
 
 page:
-  value: home
+  value: welcome-user
 
 config:
   ui:
     mount:
       el: '#app'
-      component: 'home'
+      component: 'mobile'
+  app:
+    cooldown: 3000
 
 firebase:
   config:
@@ -16,6 +18,14 @@ firebase:
     projectId: "bucharestjs-5cbd6"
     storageBucket: "bucharestjs-5cbd6.appspot.com"
     messagingSenderId: "741543736848"
+  sync:
+    users:
+      path: /data/users
+      on: /user
+      namespace: 'bar'
+    messages:
+      on: /forms/submit/message
+      namespace: 'bar'
 
 data:
   users:
@@ -28,13 +38,31 @@ data:
       pic: 'picture 2'
       say: 'Happy B Day!'
 
+messages:
+  sent: {}
+  data:
+    hurray: Uraaa!
+    baloon: Awwww, ce dragut!
+    camera: Poza time!
+    present: Multumim pentru cadou!
+    champagne: Noroc!
+    postcard: Ce felicitare frumoasa!
+
+  sentCount:
+    hurray: 0
+    baloon: 0
+    camera: 0
+    present: 0
+    champagne: 0
+    postcard: 0
+
 fields:
   data:
     name:
       key: name
       type: text
       label:
-        ro: Nume
+        ro: Alege un nume
       placeholder:
         ro: John Doe
     avatar:
@@ -53,19 +81,20 @@ fields:
         smile:
           label:
             ro: Smile Avatar
-
-
+        owl:
+          label:
+            ro: Owl Avatar
   templates:
     user:
       key: user
       name: User Form
       order:
       - avatar
-      - name
       fields:
-        name: true
         avatar: true
 
+forms:
+  data:
+    message:
+      new: {}
 
-says:
-  count: 10
