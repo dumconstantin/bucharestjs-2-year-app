@@ -1,0 +1,71 @@
+
+page:
+  value: home
+
+config:
+  ui:
+    mount:
+      el: '#app'
+      component: 'home'
+
+firebase:
+  config:
+    apiKey: "AIzaSyC_GtmDRKtqkd8UseF9jYTU4T0ikoTu79I"
+    authDomain: "bucharestjs-5cbd6.firebaseapp.com"
+    databaseURL: "https://bucharestjs-5cbd6.firebaseio.com"
+    projectId: "bucharestjs-5cbd6"
+    storageBucket: "bucharestjs-5cbd6.appspot.com"
+    messagingSenderId: "741543736848"
+
+data:
+  users:
+    id1:
+      name: 'FooBar'
+      pic: 'picture'
+      say: 'Happy B Day!'
+    id2:
+      name: 'BarFoo'
+      pic: 'picture 2'
+      say: 'Happy B Day!'
+
+fields:
+  data:
+    name:
+      key: name
+      type: text
+      label:
+        ro: Nume
+      placeholder:
+        ro: John Doe
+    avatar:
+      key: avatar
+      type: choice
+      style: radio
+      label:
+        ro: Alege un avatar
+      options:
+        bear:
+          label:
+            ro: Bear Avatar
+        robot:
+          label:
+            ro: Robot Avatar
+        smile:
+          label:
+            ro: Smile Avatar
+
+
+  templates:
+    user:
+      key: user
+      name: User Form
+      order:
+      - avatar
+      - name
+      fields:
+        name: true
+        avatar: true
+
+
+says:
+  count: 10

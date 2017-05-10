@@ -1,0 +1,29 @@
+
+[data-field-name="avatar"] {
+  background: red;
+
+  li[data-value] {
+    width: 200px;
+    height: 200px;
+    background: center center;
+    background-resize: contain;
+  }
+
+  label {
+    width: 100%;
+    height: 100%;
+    text-indent: -90000px;
+  }
+
+  li[data-value="bear"] {
+    background-image: url('../images/avatar-bear.png');
+  }
+
+  li[data-value="robot"] {
+    background-image: url('../images/avatar-robot.png');
+  }
+
+  li[data-value="smile"] {
+    background-image: url('../images/avatar-smile.png');
+  }
+}
