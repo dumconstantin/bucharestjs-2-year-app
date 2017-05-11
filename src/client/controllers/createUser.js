@@ -12,9 +12,7 @@ module.exports = {
       let user = args.data
 
       user.uid = shortId.generate()
-
-      Dom7('.view-mobile').addClass('user-created')
-      Dom7('[data-field-name="name"] input').attr('disabled', 'disabled')
+      user.value.uid = user.uid
 
       return {
         op: 'add',
