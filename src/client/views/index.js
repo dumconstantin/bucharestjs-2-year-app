@@ -1,12 +1,12 @@
 
 module.exports = {
-  name: 'mobile',
+  name: 'messager',
   args: {
     no: ''
   },
   template: pug `
-.views.mobile
-  .view.view-mobile
+.views.messager
+  .view.view-messager
     .pages
       welcome-user
       send-message

@@ -19,6 +19,10 @@ module.exports = {
         op: 'add',
         path: '/forms/data/message/new',
         value: {
+          createdAt: {
+            timestamp: args.toSend.timestamp,
+            value: args.toSend.timestamp,
+          },
           userUid: {
             timestamp: args.toSend.timestamp,
             value: args.userUid

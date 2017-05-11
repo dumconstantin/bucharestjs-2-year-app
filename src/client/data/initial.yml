@@ -3,7 +3,7 @@ config:
   ui:
     mount:
       el: '#app'
-      component: 'mobile'
+      component: 'messager'
   app:
     cooldown: 3000
 
