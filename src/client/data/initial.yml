@@ -1,7 +1,4 @@
 
-page:
-  value: welcome-user
-
 config:
   ui:
     mount:

@@ -16,7 +16,10 @@ module.exports = {
       .left
         img.userAvatar(:src="'images/avatar-' + user.avatar + '.png'")
       .center
-      .right Trimite un mesaj!
+      .right
+        | La multi ani
+        img(src="images/logo.jpg")
+        | !
 
   div.messageSent(v-if="recent")
     p {{ messages[sentMessage] }}

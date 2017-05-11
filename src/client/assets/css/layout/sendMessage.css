@@ -17,6 +17,16 @@
       display: none;
     }
 
+    .right {
+      padding-right: 4vw;
+      margin-left: -4vw;
+      img {
+        width: 17vw;
+        margin: 0 2vw;
+      }
+
+    }
+
     font-family: 'Caveat';
     font-size: 2em;
     height: 15vh;
