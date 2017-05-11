@@ -7,7 +7,7 @@ module.exports = {
     data: '/forms/submit/user/new'
   },
   fn: stream
-    .filter(args => !!args.data)
+    .filter(args => !!args.data && args.data.value.avatar)
     .map(args => {
       let user = args.data
 

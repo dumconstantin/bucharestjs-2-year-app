@@ -7,11 +7,9 @@ module.exports = {
   },
   fn: stream
     .chain((args, lib) => observer(o => {
-
       window.addEventListener("beforeunload", function (e) {
-        firebase.database().ref('/bar/users/' + lib.get('/user/new/uid')).remove()
+        firebase.database().ref('users/' + lib.get('/user/new/uid')).remove()
       })
-
     }))
 }
 

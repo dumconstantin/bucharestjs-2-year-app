@@ -1,6 +1,13 @@
 
 .page-sendMessage {
 
+  p {
+    text-align: center;
+    margin: 4vh 0 ;
+    font-size: 1.2em;
+
+  }
+
   .userAvatar {
     position: relative;
     top: 2vh;
@@ -34,7 +41,7 @@
   }
 
   .page-content {
-    padding-top: 20vh;
+    padding-top: 16vh;
   }
 
   .messageSent {

@@ -28,6 +28,7 @@ module.exports = {
 
   .page-content
 
+    p Poti sa trimiti cate felicitari vrei!
     ul.messages
       li(v-for="(value, key) in messages", data-path="/messages/toSend", :data-value="key")
         img(:src="'images/icon-' + key + '.png'")
