@@ -175,9 +175,9 @@ app_start() {
     exit 0
   fi
 
+# -v $PWD/../jsonmvc/jsonmvc:/app/node_modules/jsonmvc \
   docker run \
     -v $PWD:/app \
-    -v $PWD/../jsonmvc/jsonmvc:/app/node_modules/jsonmvc \
     -h $APP_CONTAINER_NAME \
     -d \
     --env-file ./build/default.env \

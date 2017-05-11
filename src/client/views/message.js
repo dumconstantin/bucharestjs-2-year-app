@@ -6,7 +6,7 @@ module.exports = {
     messages: '/messages/data',
     count: '/messages/sentCount',
     recent: '/messages/recent',
-    sentMessage: '/forms/submit/message/new/value/message'
+    sentMessage: '/messages/sent/value'
   },
   template: pug `
 .page.page-sendMessage(v-if="user")

@@ -1,6 +1,11 @@
 
-.view-mobile {
 
+.view-mobile {
+  h1 {
+    font-family: 'Caveat';
+    text-align: center;
+    font-size: 6em;
+  }
   .page {
     background: $color-base;
   }

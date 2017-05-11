@@ -11,8 +11,6 @@
 
 @import 'elements/form.css';
 
-@import 'layout/home.css';
 @import 'layout/mobile.css';
-@import 'layout/user-form.css';
 @import 'layout/sendMessage.css';
 

@@ -5,16 +5,17 @@ module.exports = {
   args: {
     cooldown: '/config/app/cooldown',
     userUid: '/user/new/uid',
-    toSend: '/messages/toSend',
-    sentAt: '/messages/sent/new/timestamp',
-    count: '/messages/sentCount'
+    toSend: '/messages/toSend'
   },
   fn: stream
-    .filter((args, lib) => args.toSend
-        && args.toSend.timestamp !== args.sentAt
-        && (!args.sentAt || lib.get('/time/ms') > args.sentAt.timestamp + args.cooldown)
-    )
-    .map(args => ({
+    .filter((args, lib) => {
+      let sent = lib.get('/messages/sent')
+
+      return args.toSend
+        && args.toSend.timestamp !== sent.timestamp
+        && (!sent.timestamp || lib.get('/time/ms') > sent.timestamp + args.cooldown)
+    })
+    .map((args, lib) => ([{
         op: 'add',
         path: '/forms/data/message/new',
         value: {
@@ -30,6 +31,13 @@ module.exports = {
             timestamp: args.toSend.timestamp
           }
         }
-      }))
+      }, {
+        op: 'add',
+        path: '/messages/sent',
+        value: {
+          timestamp: args.toSend.timestamp,
+          value: args.toSend.value
+        }
+      }]))
 }
 
